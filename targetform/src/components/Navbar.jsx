@@ -17,7 +17,7 @@ function Navbar() {
     return (
         <div className="bar">
             <header>
-                <h3>HOSTEL MANAGEMENT SYSTEM</h3>
+                <h3></h3>
                 <nav ref={navRef}>
                     <Link to="/addpharmacy">Add pharmacy</Link>
                     <Link to="/salesform">Add sales</Link>
