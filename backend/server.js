@@ -10,7 +10,7 @@ const formRoutes=require('./routes/form')
 
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow requests from localhost:3000
+  origin: 'https://keen-meerkat-e90492.netlify.app', // Allow requests from localhost:3000
   credentials: true // Allow credentials (cookies, authorization headers, etc.)
 }));
 
