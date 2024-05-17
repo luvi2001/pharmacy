@@ -10,7 +10,7 @@ const formRoutes=require('./routes/form')
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://benevolent-melba-c893ce.netlify.app/', // Allow requests from localhost:3000
+  origin: 'https://benevolent-melba-c893ce.netlify.app', // Allow requests from localhost:3000
   credentials: true // Allow credentials (cookies, authorization headers, etc.)
 }));
 
