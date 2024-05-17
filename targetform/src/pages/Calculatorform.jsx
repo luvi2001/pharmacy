@@ -3,9 +3,9 @@ import axios from 'axios';
 import Modal from 'react-modal';
 import '../css/register.css'
 import Navbar from '../components/Navbar';
+//http://localhost:9000/
 
-
-axios.defaults.baseURL = "http://localhost:9000/"
+axios.defaults.baseURL = "https://pharmacy-2-iqeq.onrender.com"
 
 const CalculatorForm = () => {
   const [formData, setFormData] = useState({
