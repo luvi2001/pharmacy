@@ -1,0 +1,93 @@
+
+  body{
+    height:fit-content;
+    background: linear-gradient(#86b0ef, #63a0d2);
+    width: 200%;
+
+  }
+  .container{
+    margin: 130px auto;
+    margin-left: 100%;
+    padding: 2rem 1rem;
+    width: 450px;
+    border-radius: 10px;
+    background-color: rgb(228, 231, 233);
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    color: #081a35;
+  }
+
+  .error{
+    color:red;
+  }
+
+  /*h1{
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+    color: #07001f;
+  }*/
+  .btnbt{
+    background-color:rgb(17, 67, 143);
+  }
+
+  form input{
+    width: 92%;
+    outline: none;
+    padding: 1px solid #fff;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #e4e4e4;
+    color: #081a35;
+  }
+  button{
+    width: 90%;
+    border: none;
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    color: #fff;
+    background: rgb(17, 67, 143);
+  }
+  button:hover{
+    background: rgba(17, 107, 143, 0.8);
+  }
+  input:focus{
+    border: 1px solid rgb(192, 192, 192);
+  }
+ 
+  .btn button{
+    width: 90%;
+    border: none;
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    color: #fff;
+    background: rgb(17, 67, 143);
+  }
+ 
+  /* Add this CSS to center the update form popup */
+.update-form-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.menu{
+  display: flex;
+}
+
+
+
+  
+  
+ 

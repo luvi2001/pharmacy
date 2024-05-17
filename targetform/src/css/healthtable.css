@@ -1,0 +1,56 @@
+/* styles.css */
+
+.table-container {
+    width: 150%;
+    border-collapse: collapse;
+    margin-left: 50%;
+    color: black;
+
+  }
+  .tablet{
+    width: 80%;
+    border-collapse: collapse;
+    /*margin-top: 20px;*/
+    margin-left: 10%;
+    border-color: black;
+    background-color: transparent;
+
+  }
+  
+  .table-container th,
+  .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .table-container th {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 8px;
+    text-align: left;
+  }
+  .table-container td{
+    color:rgb(7, 2, 2);
+    font-size:large;
+    
+  }
+
+  #health{
+    color: #f3ecec;
+    text-align: center;
+    margin-left: 70%;
+    width: 100%;
+  }
+
+  .table-container{
+    background-color: transparent;
+  }
+  
+  #search{
+    margin-left: 70%;
+  }
+
+  .app-button{
+
+    margin-left: 70%;
+  }

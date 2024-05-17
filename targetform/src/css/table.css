@@ -1,0 +1,36 @@
+/* styles.css */
+  
+  .tb{
+    margin: 50px auto;
+    padding: 2rem 1rem;
+    width: 450px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+
+  table {
+    width: 120%;
+    border-collapse: collapse;
+    color: #d402d7;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #000000;
+  }
+
+  h3{
+    text-align: center;
+  }
+  
