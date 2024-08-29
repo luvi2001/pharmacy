@@ -1,7 +1,7 @@
 const express =require('express')
 
 const {deleteMedicine, addMedicine, getMedicines, updateMedicine}= require('../controllers/formcontroller')
-const { addPharmacy,getMedicine, addMed, getPharmacy, addCount, addSales, updatePharm } = require('../controllers/medicincontroller')
+const { addPharmacy,getMedicine, addMed, getPharmacy, addCount, addSales, updatePharm, reset } = require('../controllers/medicincontroller')
 
 
 const router=express.Router()
@@ -18,5 +18,6 @@ router.get('/pharmacy',getPharmacy)
 router.get('/pharmacy/:pharmacyId/medicine',addCount)
 router.post('/sales',addSales)
 router.put('/pharmacy/:id',updatePharm)
+router.post('/reset',reset)
 
 module.exports= router

@@ -7,22 +7,23 @@ import Navbar from '../components/Navbar';
 
 function Pharmacyform() {
   const [pharmacyData, setPharmacyData] = useState([]);
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true);
   const pdfRef = useRef(null);
 
   useEffect(() => {
-    const fetchPharmacyData = async () => {
-      try {
-        const response = await axios.get('/api/form/pharmacy');
-        setPharmacyData(response.data);
-        setLoading(false); // Update loading state after fetching data
-      } catch (error) {
-        console.error('Error fetching pharmacy data:', error);
-        setLoading(false); // Update loading state in case of error
-      }
-    };
     fetchPharmacyData();
   }, []);
+
+  const fetchPharmacyData = async () => {
+    try {
+      const response = await axios.get('/api/form/pharmacy');
+      setPharmacyData(response.data);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching pharmacy data:', error);
+      setLoading(false);
+    }
+  };
 
   const downloadPDF = () => {
     const input = pdfRef.current;
@@ -50,8 +51,22 @@ function Pharmacyform() {
       });
   };
 
+  const resetStock = async () => {
+    const confirmation = window.confirm('Are you sure you want to reset the stock to 0?');
+    if (!confirmation) {
+      return;
+    }
+
+    try {
+      await axios.post('/api/form/reset');
+      fetchPharmacyData(); // Refresh data after reset
+    } catch (error) {
+      console.error('Error resetting stock:', error);
+    }
+  };
+
   if (loading) {
-    return <p>Loading...</p>; // Render loading state while fetching data
+    return <p>Loading...</p>;
   }
 
   const allMedicineNames = pharmacyData.reduce((acc, pharmacy) => {
@@ -73,11 +88,11 @@ function Pharmacyform() {
 
   return (
     <section>
-        <Navbar />
+      <Navbar />
       <div>
         <h2>Pharmacy Medicine Stock</h2>
         <div ref={pdfRef} style={{ overflowX: 'auto' }}>
-          <br/><br/>
+          <br /><br />
           <table className="medtable">
             <thead>
               <tr>
@@ -108,11 +123,11 @@ function Pharmacyform() {
             </tbody>
           </table>
         </div>
-        <br/><br/><br/><br/>
+        <br /><br /><br /><br />
         <button className="app-button" onClick={downloadPDF}>Download PDF</button>
+        <button className="app-button" onClick={resetStock}>Reset Stock</button>
       </div>
-      </section>
-    
+    </section>
   );
 }
 

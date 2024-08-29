@@ -14,6 +14,19 @@ const getMedicine= async (req, res) => {
   }
 };
 
+const reset = async (req, res) => {
+  try {
+    // Update all medicines' stock count to 0 in all pharmacies
+    await Pharmacy.updateMany({}, { $set: { "medicines.$[].stockCount": 0 } });
+
+    res.status(200).send('Stock counts reset to 0');
+  } catch (error) {
+    console.error('Error resetting stock counts:', error);
+    res.status(500).send('Internal Server Error');
+  }
+}
+
+
 // POST route for adding pharmacy and all medicines to it
 const addPharmacy = async (req, res) => {
     try {
@@ -146,4 +159,4 @@ const getPharmacy= async (req, res) => {
   
 
 
-module.exports = {updatePharm,addSales,addCount,getPharmacy,getMedicine,addMed,addPharmacy}
+module.exports = {reset,updatePharm,addSales,addCount,getPharmacy,getMedicine,addMed,addPharmacy}
